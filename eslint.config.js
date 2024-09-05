@@ -15,7 +15,8 @@ export default [
       prettier: prettier
     },
     rules: {
-      'prettier/prettier': 'error'
+      'prettier/prettier': 'error',
+      '@typescript-eslint/no-unused-vars': 'off'
       // 'no-console': 'off',
       // 'no-restricted-globals': 'off',
       // 'no-restricted-syntax': 'off',
