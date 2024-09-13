@@ -1,4 +1,4 @@
-import _Card from './src'
+import _Card from './src/index.tsx'
 import type { App, Plugin } from 'vue'
 
 type SFCWithInstall<T> = T & Plugin
