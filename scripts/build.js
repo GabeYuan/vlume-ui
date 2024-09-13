@@ -26,6 +26,7 @@ const baseConfig = defineConfig({
     dts({
       entryRoot: path.resolve(rootDir, 'packages'),
       include: ['packages/vlume-ui', 'packages/components'],
+      exclude: ['**/__test__/*'],
       outDir: path.resolve(outDir, 'types')
     })
   ],
