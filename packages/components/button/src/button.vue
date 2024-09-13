@@ -1,15 +1,16 @@
 <template>
-  <button class="vl-btn_primary">测试按钮</button>
+  <button :class="['vl-button', `vl-button--${props.type}`]">
+    <slot></slot>
+  </button>
 </template>
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script lang="ts" setup>
+import { buttonProps } from './button-type'
 
-export default defineComponent({
-  name: 'VlButton',
-  setup() {
-    return {}
-  }
+defineOptions({
+  name: 'VlButton'
 })
+
+const props = defineProps(buttonProps)
 </script>
 
 <style lang="scss">

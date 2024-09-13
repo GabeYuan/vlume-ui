@@ -1,0 +1,36 @@
+:root {
+  --vl-primary: #195bff;
+  --vl-success: #46c93a;
+  --vl-danger: #ff4757;
+  --vl-warn: #ffba00;
+  --vl-dark: #1e1e1e;
+  --vl-light: #f4f7f8;
+  --vl-color: #111214;
+
+  // 主题
+  --vl-background: #ffffff;
+  --vl-text: #2c3e50;
+  --vl-gray-1: #f9fcfd;
+  --vl-gray-2: #f4f7f8;
+  --vl-gray-3: #f0f3f4;
+  --vl-gray-4: #e6e9ea;
+}
+
+[class*='--primary'] {
+  --vl-color: var(--vl-primary);
+}
+[class*='--default'] {
+  --vl-color: var(--vl-primary);
+}
+[class*='--danger'] {
+  --vl-color: var(--vl-danger);
+}
+[class*='--success'] {
+  --vl-color: var(--vl-success);
+}
+[class*='--dark'] {
+  --vl-color: var(--vl-dark);
+}
+[class*='--warn'] {
+  --vl-color: var(--vl-warn);
+}

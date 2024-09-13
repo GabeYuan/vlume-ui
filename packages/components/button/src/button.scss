@@ -1,3 +1,34 @@
-.vl-btn_primary {
-	color: var(--vl-color-red);
+.vl-button {
+  --vl-color-rotate: var(--vl-primary);
+  --vl-color-darken: var(--vl-primary);
+  --vl-button-padding: 8px 16px;
+  --vl-button-margin: 5px;
+  --vl-button-border-radius: 12px;
+  --vl-button-text-color: var(--vl-text);
+  --vl-button-font-size-base: 14px;
+}
+
+.vl-button {
+  padding: var(--vl-button-padding);
+  border-radius: var(--vl-button-border-radius);
+  font-size: var(--vl-button-font-size-base);
+  color: var(--vl-button-text-color);
+  border-width: 1px;
+  border-style: solid;
+  // border-color: red;
+
+  & + .vl-button {
+    margin-left: 12px;
+  }
+
+  &--primary,
+  &--success,
+  &--warn,
+  &--danger,
+  &--info {
+    --vl-button-text-color: #ffffff;
+
+    color: var(--vl-button-text-color);
+    background: var(--vl-color);
+  }
 }
