@@ -1,0 +1,14 @@
+// 命名空间前缀 例如：vl-button, vl-input
+$namespace: 'vl' !default;
+
+// 通用分隔符 例如：vl-button, vl-input
+$common-separator: '-' !default;
+
+// 元素分隔符 例如：vl-button__icon, vl-input__label
+$element-separator: '__' !default;
+
+// 修饰符分隔符 例如：vl-button--primary, vl-input--disabled
+$modifier-separator: '--' !default;
+
+// 状态前缀 例如：is-active, is-disabled
+$state-prefix: 'is-' !default;
