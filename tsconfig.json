@@ -17,16 +17,14 @@
 
     // 指定模块解析策略
     "moduleResolution": "node",
-
+    "esModuleInterop": true,
     // 允许导入扩展名为.ts的文件
     "allowImportingTsExtensions": true,
 
     // 只输出声明文件,不生成 JavaScript 文件
     "emitDeclarationOnly": true,
-
     // 生成相应的 '.d.ts' 文件
     "declaration": true,
-
     // 路径映射,简化模块导入
     "paths": {
       "@vlume-ui/*": ["packages/*"]

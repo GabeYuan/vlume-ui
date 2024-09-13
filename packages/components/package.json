@@ -1,10 +1,17 @@
 {
-	"name": "@vlume-ui/components",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.ts",
-	"scripts": {},
-	"keywords": [],
-	"author": "",
-	"license": "ISC"
+  "name": "@vlume-ui/components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@testing-library/vue": "^8.1.0",
+    "happy-dom": "^15.7.4",
+    "vitest": "^2.1.0"
+  }
 }
