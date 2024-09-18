@@ -11,6 +11,9 @@ importers:
       '@vlume-ui/components':
         specifier: workspace:^
         version: link:packages/components
+      '@vlume-ui/utils':
+        specifier: workspace:^
+        version: link:packages/utils
     devDependencies:
       '@eslint/js':
         specifier: ^9.10.0

@@ -1,8 +1,9 @@
 /// <reference types="vitest" />
 
-import { defineConfig } from 'vite'
+import { defineConfig, UserConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
+import path from 'path'
 
 export default defineConfig({
   plugins: [vue(), vueJsx()],
@@ -17,4 +18,9 @@ export default defineConfig({
     //   web: [/.[tj]sx$/]
     // }
   }
-})
+  // resolve: {
+  //   alias: {
+  //     '@mixins': path.resolve('./styles/mixins/')
+  //   }
+  // }
+} as UserConfig)

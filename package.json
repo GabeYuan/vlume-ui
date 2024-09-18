@@ -35,7 +35,8 @@
 		"vue": "^3.4.37"
 	},
 	"dependencies": {
-		"@vlume-ui/components": "workspace:^"
+		"@vlume-ui/components": "workspace:^",
+		"@vlume-ui/utils": "workspace:^"
 	},
 	"lint-staged": {
 		"*.{js,mjs,cjs,ts,tsx,vue}": "eslint --cache --fix"

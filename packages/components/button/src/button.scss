@@ -1,34 +1,115 @@
-.vl-button {
-  --vl-color-rotate: var(--vl-primary);
-  --vl-color-darken: var(--vl-primary);
+@use '../../styles/mixins/mixins.scss' as *;
+
+@mixin button-variant($type) {
+  $button-color-types: (
+    '': (
+      'text-color': (
+        'color',
+        'white'
+      ),
+      'bg-color': (
+        'color',
+        $type
+      ),
+      'border-color': (
+        'color',
+        $type
+      ),
+      'outline-color': (
+        'color',
+        $type,
+        'light-5'
+      ),
+      'active-color': (
+        'color',
+        $type,
+        'dark-2'
+      )
+    ),
+    'hover': (
+      'text-color': (
+        'color',
+        'white'
+      ),
+      'link-text-color': (
+        'color',
+        $type,
+        'light-5'
+      ),
+      'bg-color': (
+        'color',
+        $type,
+        'light-3'
+      ),
+      'border-color': (
+        'color',
+        $type,
+        'light-3'
+      )
+    ),
+    'active': (
+      'bg-color': (
+        'color',
+        $type,
+        'dark-2'
+      ),
+      'border-color': (
+        'color',
+        $type,
+        'dark-2'
+      )
+    ),
+    'disabled': (
+      'text-color': (
+        'color',
+        'white'
+      ),
+      'bg-color': (
+        'color',
+        $type,
+        'light-5'
+      ),
+      'border-color': (
+        'color',
+        $type,
+        'light-5'
+      )
+    )
+  );
+
+  @each $type, $typeMap in $button-color-types {
+    @each $typeColor, $list in $typeMap {
+      @include css-var-from-global(('button', $type, $typeColor), $list);
+    }
+  }
+}
+
+@include b(button) {
   --vl-button-padding: 8px 16px;
   --vl-button-margin: 5px;
   --vl-button-border-radius: 12px;
-  --vl-button-text-color: var(--vl-text);
   --vl-button-font-size-base: 14px;
 }
 
-.vl-button {
+@include b(button) {
   padding: var(--vl-button-padding);
   border-radius: var(--vl-button-border-radius);
   font-size: var(--vl-button-font-size-base);
   color: var(--vl-button-text-color);
   border-width: 1px;
   border-style: solid;
-  // border-color: red;
-
-  & + .vl-button {
+  background: var(--vl-button-bg-color);
+  & + & {
     margin-left: 12px;
   }
 
-  &--primary,
-  &--success,
-  &--warn,
-  &--danger,
-  &--info {
-    --vl-button-text-color: #ffffff;
+  @each $type in (primary, success, warn, danger, info) {
+    @include m($type) {
+      @include button-variant($type);
+    }
+  }
 
-    color: var(--vl-button-text-color);
-    background: var(--vl-color);
+  &:hover {
+    background: var(--vl-button-hover-bg-color);
   }
 }

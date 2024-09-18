@@ -1,0 +1,75 @@
+@use 'sass:math';
+@use 'sass:map';
+
+// types
+$types: primary, success, warn, danger, info;
+
+// Color
+$colors: () !default;
+$colors: map.deep-merge(
+  (
+    'white': #ffffff,
+    'black': #000000,
+    'primary': (
+      'base': #195bff
+    ),
+    'success': (
+      'base': #46c93a
+    ),
+    'warn': (
+      'base': #ffba00
+    ),
+    'danger': (
+      'base': #ff4757
+    ),
+    'info': (
+      'base': #909399
+    )
+  ),
+  $colors
+);
+
+$color-white: map.get($colors, 'white') !default;
+$color-black: map.get($colors, 'black') !default;
+$color-primary: map.get($colors, 'primary', 'base') !default;
+$color-success: map.get($colors, 'success', 'base') !default;
+$color-warn: map.get($colors, 'warn', 'base') !default;
+$color-danger: map.get($colors, 'danger', 'base') !default;
+$color-info: map.get($colors, 'info', 'base') !default;
+
+@mixin set-color-mix-level(
+  $type,
+  $number,
+  $mode: 'light',
+  $mix-color: $color-white
+) {
+  $colors: map.deep-merge(
+    (
+      $type: (
+        '#{$mode}-#{$number}':
+          mix(
+            $mix-color,
+            map.get($colors, $type, 'base'),
+            math.percentage(math.div($number, 10))
+          )
+      )
+    ),
+    $colors
+  ) !global;
+}
+// $colors.primary.light-i
+// --vl-color-primary-light-i
+// 10% 53a8ff
+// 20% 66b1ff
+// 30% 79bbff
+// 40% 8cc5ff
+// 50% a0cfff
+// 60% b3d8ff
+// 70% c6e2ff
+// 80% d9ecff
+// 90% ecf5ff
+@each $type in $types {
+  @for $i from 1 through 9 {
+    @include set-color-mix-level($type, $i, 'light', $color-white);
+  }
+}
