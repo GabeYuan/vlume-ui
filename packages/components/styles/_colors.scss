@@ -3,46 +3,67 @@
 @use 'common/var' as *;
 @use 'mixins/var' as *;
 @use 'mixins/mixins' as *;
-
 :root {
-  // --vl-primary: #195bff;
-  // --vl-success: #46c93a;
-  // --vl-warn: #ffba00;
-  // --vl-danger: #ff4757;
-  // --vl-dark: #1e1e1e;
-  // --vl-light: #f4f7f8;
-  // --vl-color: #111214;
+  @include set-css-var-value('color-white', $color-white);
+  @include set-css-var-value('color-black', $color-black);
 
-  // // 主题
-  // --vl-background: #ffffff;
-  // --vl-text: #2c3e50;
-  // --vl-gray-1: #f9fcfd;
-  // --vl-gray-2: #f4f7f8;
-  // --vl-gray-3: #f0f3f4;
-  // --vl-gray-4: #e6e9ea;
-  --vl-color-white: #ffffff;
-  --vl-button-text-color: #ee0f0f;
+  // get rgb
+  @each $type in (primary, success, warn, danger, info) {
+    @include set-css-color-rgb($type);
+  }
+
+  // Typography
+  @include set-component-css-var('font-size', $font-size);
+  @include set-component-css-var('font-family', $font-family);
+
+  @include set-css-var-value('font-weight-primary', 500);
+  @include set-css-var-value('font-line-height-primary', 24px);
+
+  // z-index --vl-index-#{$type}
+  @include set-component-css-var('index', $z-index);
+
+  // --el-border-radius-#{$type}
+  @include set-component-css-var('border-radius', $border-radius);
+}
+
+// for light
+:root {
+  color-scheme: light;
 
   @each $type in (primary, success, warn, danger, info) {
     @include set-css-color-type($colors, $type);
   }
-}
 
-// [class*='--primary'] {
-//   --vl-color: var(--vl-primary);
-// }
-// [class*='--default'] {
-//   --vl-color: var(--vl-primary);
-// }
-// [class*='--danger'] {
-//   --vl-color: var(--vl-danger);
-// }
-// [class*='--success'] {
-//   --vl-color: var(--vl-success);
-// }
-// [class*='--dark'] {
-//   --vl-color: var(--vl-dark);
-// }
-// [class*='--warn'] {
-//   --vl-color: var(--vl-warn);
-// }
+  // color-scheme
+  // Background --vl-bg-color-#{$type}
+  @include set-component-css-var('bg-color', $bg-color);
+  // --vl-text-color-#{$type}
+  @include set-component-css-var('text-color', $text-color);
+  // --vl-border-color-#{$type}
+  @include set-component-css-var('border-color', $border-color);
+  // Fill --vl-fill-color-#{$type}
+  @include set-component-css-var('fill-color', $fill-color);
+
+  // Box-shadow
+  // --vl-box-shadow-#{$type}
+  // @include set-component-css-var('box-shadow', $box-shadow);
+  // Disable base
+  // @include set-component-css-var('disabled', $disabled);
+
+  // overlay & mask
+  // @include set-component-css-var('overlay-color', $overlay-color);
+  // @include set-component-css-var('mask-color', $mask-color);
+
+  // Border
+  @include set-css-var-value('border-width', $border-width);
+  @include set-css-var-value('border-style', $border-style);
+  @include set-css-var-value('border-color-hover', $border-color-hover);
+  @include set-css-var-value(
+    'border',
+    getCssVar('border-width') getCssVar('border-style')
+      getCssVar('border-color')
+  );
+
+  // Svg
+  @include css-var-from-global('svg-monochrome-grey', 'border-color');
+}
