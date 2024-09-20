@@ -33,21 +33,6 @@
     margin-left: 12px;
   }
 
-  &:hover {
-    background: getCssVar('button', 'hover', 'bg-color');
-    color: getCssVar('button', 'hover', 'text-color');
-    border-color: getCssVar('button', 'hover', 'border-color');
-    // box-shadow: 0 10px 20px -10px getCssVar('button', 'hover', 'bg-color');
-    // transform: translateY(-3px);
-    // transition: all 0.3s ease;
-  }
-
-  &:active {
-    color: getCssVar('button', 'active', 'text-color');
-    border-color: getCssVar('button', 'active', 'border-color');
-    background-color: getCssVar('button', 'active', 'bg-color');
-  }
-
   @include when(border) {
     $button-border-width: 2px;
     border-width: $button-border-width;
@@ -114,6 +99,42 @@
           map.get($button-font-size, $size),
           map.get($button-border-radius, $size)
         );
+      }
+    }
+  }
+
+  &:hover {
+    background: getCssVar('button', 'hover', 'bg-color');
+    color: getCssVar('button', 'hover', 'text-color');
+    border-color: getCssVar('button', 'hover', 'border-color');
+    // box-shadow: 0 10px 20px -10px getCssVar('button', 'hover', 'bg-color');
+    // transform: translateY(-3px);
+    // transition: all 0.3s ease;
+  }
+
+  &:active {
+    color: getCssVar('button', 'active', 'text-color');
+    border-color: getCssVar('button', 'active', 'border-color');
+    background-color: getCssVar('button', 'active', 'bg-color');
+    &::before {
+      display: none;
+    }
+  }
+
+  // 放在最后，避免样式覆盖
+  @include when(disabled) {
+    &,
+    &:hover {
+      cursor: not-allowed;
+      color: getCssVar('button', 'disabled', 'text-color');
+      background-image: none;
+      background-color: getCssVar('button', 'disabled', 'bg-color');
+      border-color: getCssVar('button', 'disabled', 'border-color');
+      @include when(gradient) {
+        opacity: 0.55;
+        &::before {
+          display: block;
+        }
       }
     }
   }

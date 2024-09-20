@@ -13,6 +13,10 @@ export const buttonProps = {
     type: String as PropType<ButtonSize>,
     default: 'default'
   },
+  disabled: {
+    type: Boolean,
+    default: false
+  },
   gradient: {
     type: Boolean,
     default: false
@@ -31,4 +35,10 @@ export const buttonProps = {
   }
 } as const
 
+export const buttonEmits = {
+  click: (evt: MouseEvent) => evt instanceof MouseEvent
+}
+
 export type ButtonProps = ExtractPropTypes<typeof buttonProps>
+
+export type ButtonEmits = typeof buttonEmits

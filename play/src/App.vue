@@ -52,5 +52,11 @@
     <vl-button gradient type="success">success</vl-button>
     <vl-button gradient type="warn">warn</vl-button>
     <vl-button gradient type="danger">Danger</vl-button>
+
+    <hr />
+    <!-- <h3>disabled</h3> -->
+    <vl-button disabled gradient type="primary">primary</vl-button>
+    <vl-button disabled type="primary">disabled</vl-button>
+    <vl-button disabled border type="primary">disabled</vl-button>
   </div>
 </template>

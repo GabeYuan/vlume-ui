@@ -75,6 +75,9 @@ importers:
       '@vlume-ui/hooks':
         specifier: workspace:^
         version: link:../hooks
+      '@vlume-ui/utils':
+        specifier: workspace:^
+        version: link:../utils
     devDependencies:
       '@testing-library/vue':
         specifier: ^8.1.0

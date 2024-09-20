@@ -15,6 +15,7 @@
     "vitest": "^2.1.0"
   },
   "dependencies": {
-    "@vlume-ui/hooks": "workspace:^"
+    "@vlume-ui/hooks": "workspace:^",
+    "@vlume-ui/utils": "workspace:^"
   }
 }
