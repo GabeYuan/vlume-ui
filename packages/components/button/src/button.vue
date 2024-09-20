@@ -1,6 +1,6 @@
 <template>
   <button :class="buttonCls">
-    <span>
+    <span :class="[ns.e('text')]">
       <slot />
     </span>
   </button>
@@ -18,7 +18,15 @@ const props = defineProps(buttonProps)
 
 const ns = useNamespace('button')
 
-const buttonCls = computed(() => [ns.b(), ns.m(props.type)])
+const buttonCls = computed(() => [
+  ns.b(),
+  ns.m(props.type),
+  ns.m(props.size),
+  ns.is('border', props.border),
+  ns.is('circle', props.circle),
+  ns.is('square', props.square),
+  ns.is('gradient', props.gradient)
+])
 </script>
 
 <style lang="scss">

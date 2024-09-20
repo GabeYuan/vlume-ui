@@ -3,14 +3,54 @@
 <template>
   <div>
     <h2>按钮</h2>
+
     <hr />
-    <h3>类型</h3>
+    <!-- <h3>类型</h3> -->
+
     <vl-button>Default</vl-button>
     <vl-button type="primary">primary</vl-button>
     <vl-button type="success">success</vl-button>
     <vl-button type="warn">warn</vl-button>
     <vl-button type="danger">danger</vl-button>
     <vl-button type="info">info</vl-button>
+
+    <hr />
+    <!-- <h3>Border</h3> -->
+
+    <vl-button border>Default</vl-button>
+    <vl-button border type="primary">primary</vl-button>
+    <vl-button border type="success">success</vl-button>
+    <vl-button border type="warn">warn</vl-button>
+    <vl-button border type="danger">danger</vl-button>
+    <vl-button border type="info">info</vl-button>
+
+    <hr />
+    <!-- <h3>Circle</h3> -->
+
+    <vl-button circle type="primary">Home</vl-button>
+    <vl-button circle type="success">Home</vl-button>
+    <vl-button circle border type="primary">Home</vl-button>
+
+    <hr />
+    <!-- <h3>Square</h3> -->
+
+    <vl-button square type="primary">首页</vl-button>
+    <vl-button square type="success">首页</vl-button>
+    <vl-button square border type="primary">Home</vl-button>
+
+    <hr />
+    <!-- <h3>Size</h3> -->
+    <vl-button type="primary" size="xl">XLarge</vl-button>
+    <vl-button type="primary" size="large">Lager</vl-button>
+    <vl-button type="primary">Default</vl-button>
+    <vl-button type="primary" size="small">Small</vl-button>
+    <vl-button type="primary" size="mini">mini</vl-button>
+
+    <hr />
+    <!-- <h3>gradient</h3> -->
+    <vl-button gradient type="primary">primary</vl-button>
+    <vl-button gradient type="success">success</vl-button>
+    <vl-button gradient type="warn">warn</vl-button>
+    <vl-button gradient type="danger">Danger</vl-button>
   </div>
-  <!-- <vl-card /> -->
 </template>
