@@ -25,6 +25,7 @@
 @include b(button) {
   border-width: getCssVar('border-width');
   border-style: getCssVar('border-style');
+  border-color: getCssVar('button', 'border-color');
   color: getCssVar('button', 'text-color');
   background: getCssVar('button', 'bg-color');
   & + & {

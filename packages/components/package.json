@@ -13,5 +13,8 @@
     "@testing-library/vue": "^8.1.0",
     "happy-dom": "^15.7.4",
     "vitest": "^2.1.0"
+  },
+  "dependencies": {
+    "@vlume-ui/hooks": "workspace:^"
   }
 }

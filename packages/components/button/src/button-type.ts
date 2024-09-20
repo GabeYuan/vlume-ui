@@ -5,7 +5,7 @@ type ButtonType = 'primary' | 'success' | 'danger' | 'warn' | 'info'
 export const buttonProps = {
   type: {
     type: String as PropType<ButtonType>,
-    default: 'secondary'
+    default: ''
   }
 } as const
 
