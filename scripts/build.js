@@ -26,7 +26,7 @@ const baseConfig = defineConfig({
     dts({
       entryRoot: path.resolve(rootDir, 'packages'),
       include: ['packages/**'],
-      exclude: ['**/__test__/*'],
+      exclude: ['**/__test__/*', '**/vite.config.ts'],
       outDir: path.resolve(outDir, 'types')
     })
   ],
