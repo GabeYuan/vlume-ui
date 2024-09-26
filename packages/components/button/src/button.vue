@@ -1,7 +1,7 @@
 <template>
   <button :class="buttonCls" @click="handleClick">
     <span :class="[ns.e('text')]">
-      <slot />
+      <slot>按钮</slot>
     </span>
   </button>
 </template>
