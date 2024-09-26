@@ -26,7 +26,7 @@
 
     <hr />
     <!-- <h3>flat</h3> -->
-    <vl-button flat>primary</vl-button>
+    <vl-button flat>Default</vl-button>
     <vl-button flat type="primary">primary</vl-button>
     <vl-button flat type="success">success</vl-button>
     <vl-button flat type="warn">warn</vl-button>
@@ -35,7 +35,7 @@
 
     <hr />
     <!-- <h3>link</h3> -->
-    <vl-button link>primary</vl-button>
+    <vl-button link>Default</vl-button>
     <vl-button link type="primary">primary</vl-button>
     <vl-button link type="success">success</vl-button>
     <vl-button link type="warn">warn</vl-button>

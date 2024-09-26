@@ -59,7 +59,7 @@
     }
 
     @include when(disabled) {
-      color: getCssVar('button', 'disabled', 'text-color');
+      color: getCssVar('button', 'disabled', 'link-text-color');
       background-color: transparent !important;
       border-color: transparent !important;
     }
