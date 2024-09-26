@@ -32,6 +32,14 @@ export const buttonProps = {
   square: {
     type: Boolean,
     default: false
+  },
+  flat: {
+    type: Boolean,
+    default: false
+  },
+  link: {
+    type: Boolean,
+    default: false
   }
 } as const
 

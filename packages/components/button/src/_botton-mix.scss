@@ -59,6 +59,68 @@
   }
 }
 
+@mixin button-flat($type) {
+  $button-color-types: (
+    '': (
+      'text-color': (
+        'color',
+        $type,
+        // 'dark-2'
+      ),
+      'bg-color': (
+        'color',
+        $type,
+        'light-8'
+      ),
+      'border-color': (
+        'border',
+        'color',
+        'transparent'
+      )
+    ),
+    'hover': (
+      'text-color': (
+        'color',
+        $type
+      ),
+      'bg-color': (
+        'color',
+        $type,
+        'light-7'
+      ),
+      'border-color': (
+        'border',
+        'color',
+        'transparent'
+      )
+    ),
+    'active': (
+      'text-color': (
+        'color',
+        'white'
+      )
+    )
+  );
+
+  @each $type, $typeMap in $button-color-types {
+    @each $typeColor, $list in $typeMap {
+      @include css-var-from-global(('button', $type, $typeColor), $list);
+    }
+  }
+
+  &.is-disabled {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      color: getCssVar('color', $type, 'light-5');
+      background-color: getCssVar('color', $type, 'light-9');
+      // border-color: getCssVar('color', $type, 'light-8');
+      border-color: getCssVar('border-color', 'transparent');
+    }
+  }
+}
+
 @mixin button-variant($type) {
   $button-color-types: (
     '': (
@@ -143,9 +205,12 @@
   }
 
   &.is-border,
-  &.is-text,
-  &.is-link {
+  &.is-text {
     @include button-plain($type);
+  }
+  &.is-link,
+  &.is-flat {
+    @include button-flat($type);
   }
 }
 

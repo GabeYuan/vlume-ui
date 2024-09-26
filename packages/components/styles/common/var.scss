@@ -124,7 +124,8 @@ $border-color: map.merge(
     'lighter': #ebeef5,
     'extra-light': #f2f6fc,
     'dark': #d4d7de,
-    'darker': #cdd0d6
+    'darker': #cdd0d6,
+    'transparent': transparent
   ),
   $border-color
 );
@@ -149,7 +150,8 @@ $bg-color: map.merge(
   (
     '': #ffffff,
     'page': #f2f3f5,
-    'overlay': #ffffff
+    'overlay': #ffffff,
+    'transparent': transparent
   ),
   $bg-color
 );

@@ -25,6 +25,24 @@
     <vl-button border type="info">info</vl-button>
 
     <hr />
+    <!-- <h3>flat</h3> -->
+    <vl-button flat>primary</vl-button>
+    <vl-button flat type="primary">primary</vl-button>
+    <vl-button flat type="success">success</vl-button>
+    <vl-button flat type="warn">warn</vl-button>
+    <vl-button flat type="danger">danger</vl-button>
+    <vl-button flat type="info">info</vl-button>
+
+    <hr />
+    <!-- <h3>link</h3> -->
+    <vl-button link>primary</vl-button>
+    <vl-button link type="primary">primary</vl-button>
+    <vl-button link type="success">success</vl-button>
+    <vl-button link type="warn">warn</vl-button>
+    <vl-button link type="danger">danger</vl-button>
+    <vl-button link type="info">info</vl-button>
+
+    <hr />
     <!-- <h3>Circle</h3> -->
 
     <vl-button circle type="primary">Home</vl-button>

@@ -47,6 +47,21 @@
     }
   }
 
+  @include when(link) {
+    border-color: getCssVar('border-color', 'transparent');
+    background-color: getCssVar('bg-color', 'transparent');
+    padding: 0;
+    font-weight: 600;
+    &:hover {
+      background-color: getCssVar('bg-color', 'transparent');
+      border-color: getCssVar('border-color', 'transparent');
+      color: getCssVar('button', 'hover', 'bg-color');
+    }
+    &:active {
+      color: getCssVar('button', 'active', 'bg-color');
+    }
+  }
+
   @include when(circle) {
     border-radius: getCssVar('border-radius', 'round');
   }
