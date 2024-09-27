@@ -40,6 +40,10 @@ export const buttonProps = {
   link: {
     type: Boolean,
     default: false
+  },
+  text: {
+    type: Boolean,
+    default: false
   }
 } as const
 

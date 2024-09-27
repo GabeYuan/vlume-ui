@@ -209,11 +209,11 @@
     }
   }
 
-  &.is-border,
-  &.is-text {
+  &.is-border {
     @include button-plain($type);
   }
   &.is-link,
+  &.is-text,
   &.is-flat {
     @include button-flat($type);
   }

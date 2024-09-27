@@ -29,6 +29,7 @@ const buttonCls = computed(() => [
   ns.is('square', props.square),
   ns.is('flat', props.flat),
   ns.is('link', props.link),
+  ns.is('text', props.text),
   ns.is('gradient', props.gradient)
 ])
 

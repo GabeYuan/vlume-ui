@@ -34,6 +34,15 @@
     <vl-button flat type="info">info</vl-button>
 
     <hr />
+    <!-- <h3>text</h3> -->
+    <vl-button text>Default</vl-button>
+    <vl-button text type="primary">primary</vl-button>
+    <vl-button text type="success">success</vl-button>
+    <vl-button text type="warn">warn</vl-button>
+    <vl-button text type="danger">danger</vl-button>
+    <vl-button text type="info">info</vl-button>
+
+    <hr />
     <!-- <h3>link</h3> -->
     <vl-button link>Default</vl-button>
     <vl-button link type="primary">primary</vl-button>
