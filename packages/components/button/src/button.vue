@@ -1,5 +1,5 @@
 <template>
-  <button :class="buttonCls" @click="handleClick">
+  <button :class="buttonCls" v-bind="$attrs" @click="handleClick">
     <span :class="[ns.e('text')]">
       <slot>按钮</slot>
     </span>
