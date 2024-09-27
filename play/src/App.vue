@@ -85,5 +85,13 @@
     <vl-button disabled gradient type="primary">primary</vl-button>
     <vl-button disabled type="primary">disabled</vl-button>
     <vl-button disabled border type="primary">disabled</vl-button>
+
+    <hr />
+    <!-- <h3>block</h3> -->
+    <div style="width: 260px">
+      <vl-button block gradient type="primary">primary</vl-button>
+      <vl-button block gradient type="warn">warn</vl-button>
+      <vl-button block gradient type="success">success</vl-button>
+    </div>
   </div>
 </template>

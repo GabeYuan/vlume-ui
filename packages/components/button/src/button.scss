@@ -149,6 +149,14 @@
       z-index: 1;
     }
   }
+  @include when(block) {
+    display: block;
+    width: 100%;
+    & + & {
+      margin: 0;
+      margin-top: 12px;
+    }
+  }
 
   @each $size in (xl, large, small, mini) {
     @include m($size) {

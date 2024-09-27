@@ -30,7 +30,8 @@ const buttonCls = computed(() => [
   ns.is('flat', props.flat),
   ns.is('link', props.link),
   ns.is('text', props.text),
-  ns.is('gradient', props.gradient)
+  ns.is('gradient', props.gradient),
+  ns.is('block', props.block)
 ])
 
 const handleClick = (evt: MouseEvent) => {

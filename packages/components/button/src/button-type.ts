@@ -44,6 +44,10 @@ export const buttonProps = {
   text: {
     type: Boolean,
     default: false
+  },
+  block: {
+    type: Boolean,
+    default: false
   }
 } as const
 

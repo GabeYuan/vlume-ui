@@ -113,4 +113,14 @@ describe('Button.vue', () => {
 
     expect(button.classList.contains('is-text')).toBe(true)
   })
+
+  it('block', () => {
+    const button = render(Button, {
+      props: {
+        block: true
+      }
+    }).getByRole('button')
+
+    expect(button.classList.contains('is-block')).toBe(true)
+  })
 })
